@@ -1,0 +1,56 @@
+{
+  "name": "create-hono-app",
+  "version": "0.2.0",
+  "description": "CLI tool to scaffold Hono applications from OpenAPI specifications",
+  "type": "module",
+  "keywords": [
+    "hono",
+    "cli",
+    "scaffold",
+    "openapi",
+    "typescript",
+    "drizzle"
+  ],
+  "author": "Hitesh Rohira",
+  "license": "MIT",
+  "bin": {
+    "create-hono-app": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "start": "node dist/cli.js",
+    "dev": "tsx watch bin/cli.ts",
+    "prepublishOnly": "npm run build",
+    "test": "vitest",
+    "lint": "eslint src/**/*.ts bin/**/*.ts",
+    "format": "prettier --write src/**/*.ts bin/**/*.ts"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "fs-extra": "^11.2.0",
+    "handlebars": "^4.7.8",
+    "openapi-types": "^12.1.3",
+    "js-yaml": "^4.1.0",
+    "nanospinner": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.11.0",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "prettier": "^3.2.4",
+    "tsc-alias": "^1.8.11",
+    "tsx": "^4.19.3",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
