@@ -1,4 +1,3 @@
-// bin/cli.ts
 import { Command } from "commander";
 import path from "node:path";
 import { existsSync } from "node:fs";
@@ -13,7 +12,6 @@ import {
 import * as Handlebars from "handlebars";
 import { createSpinner } from "nanospinner";
 import {
-  getEndpointsByTag,
   parseOpenAPISpec,
   type ParsedOpenAPI,
   type ParsedEndpoint,
